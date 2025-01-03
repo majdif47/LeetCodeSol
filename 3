@@ -1,0 +1,26 @@
+package main
+import "fmt"
+
+func numberOfAlternatingGroups(colors []int) int {
+  start := 0
+  end := 0
+  count := 0
+  for {
+    if start == len(colors)-1 {
+      break
+    }
+    if end >= len(colors) {
+      end = (start+2) - (len(colors))
+    }else {end = start+2}
+    if colors[end-1] != colors[end] && colors[end-1] != colors[start] {
+      count++
+    }
+    start++
+  }
+  return count
+}
+
+
+func main() {
+  fmt.Println(numberOfAlternatingGroups([]int{1,1,1}))
+}
