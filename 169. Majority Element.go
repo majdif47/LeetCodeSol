@@ -1,5 +1,3 @@
-
-
 func majorityElement(nums []int) int {
   n := len(nums)
   m := make(map[int]int)

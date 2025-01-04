@@ -1,5 +1,3 @@
-package main
-
 func toHex(num int) string {
   if num == 0 {
     return "0"
